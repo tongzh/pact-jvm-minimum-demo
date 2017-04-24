@@ -1,19 +1,32 @@
-# pact-java
-A consumer-driven contract testing example using pact-jvm, spring boot, and maven 
+# A minimum pact jvm demo 
+
+## Dependency
+
+* pact-jvm
+* spring boot
+* maven 
 
 ## Running the consumer
-    cd /pact-consumer
-    mvn test
 
-This will create a pact file in target/pacts. If the tests pass, we know that the consumer interacts correctly with the contract.
+```
+cd /pact-consumer
+mvn test
+```
+
+This will create a pact file in target/pacts.
 
 ## Running the provider
+
 Start the provider application
 
-    cd /pact-provider
-    mvn spring-boot:run
+```
+cd /pact-provider
+mvn spring-boot:run
+```
 
-In a separate window/process
+Run the pact verification in a separate window/process
 
-    cd /pact-provider
-    mvn pact:verify
+```
+cd /pact-provider
+mvn pact:verify
+```
